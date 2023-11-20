@@ -11,6 +11,8 @@ from collections import namedtuple
 # Definitions
 #--------------------------------------------------------------------------------
 
+training_classes = 20
+
 mapping = {
     -1: 0,
     0: 0,

@@ -16,7 +16,7 @@ from torchvision.utils import make_grid
 
 from nets import SimpleSegmentationNet
 from data import CityscapesDataset
-from labels import labels
+from labels import labels, training_classes
 from unet import UNet
 
 
@@ -117,7 +117,7 @@ def main():
     train_loader = DataLoader(traindata, batch_size)
     val_loader = DataLoader(valdata, batch_size)
 
-    num_classes = len(labels)
+    num_classes = training_classes
     model = UNet(3, num_classes)
     model.to(device)
 
